@@ -1,0 +1,13 @@
+Só um exemplo pra alinhar e colocar cores...
+
+
+
+
+<style>
+    body{
+      background-color: black;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+  </style>

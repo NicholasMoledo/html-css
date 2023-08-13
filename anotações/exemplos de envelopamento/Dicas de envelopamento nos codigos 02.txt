@@ -1,0 +1,6 @@
+Para conseguir colocar as tags em palavras repetidas:
+
+1- Selecionar a palavra ex: android;
+2- CRTL + SHIFT + L (Multiplos cursores em palavras repetidas);
+3- CRTL + SHIFT + P (Envelope + a TAG ex: <strong/>);
+4- ENTER
