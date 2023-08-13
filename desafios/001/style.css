@@ -185,6 +185,7 @@ h2 {
     font-size: 1.3em;
     background-image: linear-gradient(to right, var(--cor3), transparent);
     text-indent: 10px;
+    margin-bottom: 20px;
 }
 
 aside {
