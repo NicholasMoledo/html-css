@@ -1,0 +1,21 @@
+Colocando uma imagem de fundo no seu site
+
+	background-image: url('   ');
+
+Ex:	body {
+            	background-image: url('imagens/wallpaper001.jpg');
+        	}
+
+Com cor sólida:
+
+            	background-color: skyblue;
+
+Com gradiente:
+
+            	background-image: linear-gradient(to bottom, yellow, red);
+
+Com url:
+
+            	background-image: url('link do local ou site');
+
+DICA: Para criar 3 <div> com classe quadrado ao mesmo tempo, digitar div.quadrado*3, dentro de <style>.
