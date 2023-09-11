@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Zebrado nas tabelas e cabeçalho fixo</title>
+    <style>
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table {
+        width: 500px;
+        border-collapse: collapse;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    td, th {
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    thead, tfoot {
+        background-color: #2b2b2b;
+        color: #ffffff;
+    }
+
+    td.num {
+        text-align: right;
+    }
+
+    td.num2 {
+        font-weight: bold;
+    }
+
+    thead > tr > th { 
+        
+    
+        /* Quando temos uma tabela com muitos dados, com muitas colunas e principalmente com muitas linhas,conforme vamos descendo é natural que o cabeçalho fique para cima e "suma", e é nessa hora que algumas vezes acabamos nos perdendo na leitura da tabela, visto que esquecemos aquilo que determinadas colunas querem dizer */ 
+        
+    
+        /* Um cabeçalho fixo pode solucionar muitos problemas, visto que conforme vamos scrollando a tabela, o cabeçalho se mantem fixo no topo, mantendo os títulos das colunas sempre visíveis. */ 
+    
+    
+        /* Para fazer isso, devemos abrir um seletor para a área da cabeça da nossa tabela (thead), que é onde estão as células de título que constituem o nosso cabeçalho... E dentro desse seletor, declarar a propriedade " position " com o valor " sticky ". Após isso é necessário usar uma propriedade auxiliar do position, o " top "... E como não queremos mudar de lugar o nosso cabeçalho e sim apenas ativar o "sticky", você deve inserir nessa propriedade auxiliar o valor " -1px ", colando o cabeçalho na posição "zero".*/
+    
+    /* Exemplo abaixo */
+
+        position: sticky;
+        top: -1px;
+        background-color: #2b2b2b;
+    }
+
+    caption {
+        font-size: 1.2em;
+        font-weight: bold;
+        background-color: #d3d3d3;
+        padding: 10px;
+    }
+
+    .Pop {
+        text-align: right;
+    }
+
+    tbody > tr:nth-child(2n) { /* 2n-1 */
+        background-color: #ffffff;
+    }
+
+    tbody > tr:nth-child(even) { /* 2n */
+        background-color: rgb(88, 88, 88);
+    }
+
+    </style>
+</head>
+<body>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        CAPTION
+        TABLE
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+    <table>
+        <caption>10 Estados Federativos do Brazil</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+               
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+              <td class="num2">São Paulo</td>
+              <td class="num">45.919.049</td>
+            </tr>
+             <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            
+            <tr>
+                <td class="num2">Rio de Janeiro</td>
+                <td class="num">17.264.943</td>
+             </tr>
+      
+            <tr>
+                <td>Bahia</td>
+                <td class="num">11.873.061</td>
+             </tr>
+
+             <tr>
+                <td class="num2">Paraná</td>
+                <td class="num">11.433.957</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11.377.239</td>
+            </tr>
+            <tr>
+                <td class="num2">Pernambuco</td>
+                <td class="num">9.557.071</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">3.602.865</td>
+            </tr>
+            <tr>
+                <td class="num2">Santa Catarina</td>
+                <td class="num">7.154.788</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7.075.181</td>
+            </tr>
+            <tfoot>
+                <tr>
+                   <th scope="row">Total de Habitantes</th>
+                   <th scope="row" style="text-align: right;">110.147.125</th>
+            </tfoot>
+
+        </tbody>
+    </table>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis at porro harum similique. Odit earum voluptatum, non sapiente consectetur molestias alias deleniti hic impedit temporibus, quibusdam minima ducimus? Quod rerum impedit labore officiis quo fuga? Ea totam fugit unde suscipit ipsa eius necessitatibus! Ullam iste rem consequatur quidem temporibus aperiam suscipit? Nulla natus ea similique placeat nemo, nostrum fuga molestiae dolorum eveniet repellendus veritatis ad iusto explicabo, nesciunt doloremque. Molestias dolorum voluptas consectetur voluptate expedita nulla quod necessitatibus! Illo hic fuga maiores! Voluptas amet sit ullam perferendis numquam similique deserunt accusamus incidunt dolore. Facere cupiditate officiis voluptatibus, repudiandae, hic et sit non totam eos debitis officia cumque esse blanditiis reiciendis ipsum quidem nemo ducimus nobis. Commodi iste dolor reiciendis cum officia voluptate modi optio, a totam perferendis sint? Totam excepturi eaque error debitis vero rerum quidem dolor pariatur, eius corporis aut ratione rem blanditiis quod labore dicta commodi repellat, facilis facere. Hic facere nobis sit nam dolorum architecto odit, doloribus consequatur numquam sint natus distinctio, magni neque eveniet rerum beatae dolorem aspernatur optio aperiam? Aut nisi iusto labore illum temporibus quod minus fuga error distinctio aperiam, obcaecati deserunt, velit nemo omnis vel pariatur aspernatur minima dicta cumque beatae voluptatum fugiat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias rem repudiandae laborum aliquid in! Quae sunt eos, pariatur voluptas et magni cupiditate laborum sequi saepe repudiandae fugiat expedita necessitatibus, ea excepturi corrupti earum laboriosam neque quisquam officia iste consequuntur architecto? Maiores rem ratione culpa eaque vel aliquid, quam ipsum? Suscipit nisi, culpa eius qui possimus animi rerum ut? Facere eaque consequatur adipisci aliquam numquam ratione, libero ducimus iusto vel consectetur rem earum ullam error doloribus odio veniam alias unde, minima amet! Adipisci quae magni culpa consequatur quia aperiam impedit possimus.</p>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+DICA: Para ver as alterações da tabela em tempo real e
+não precisar ficar atualizando a página a cada vez que fizer uma mudança, é instale a extensão "Live Server".  
+Depois clica com o botão direito do mouse  na área de html do Visual Studio Code  e seleciona a opção "Open White Live Server". 
+Facilita muito para acompanhar as alterações da pagina à medida que vamos criando o código.
