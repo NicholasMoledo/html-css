@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000829d7;
+}
+
+.caixa {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa::before, .caixa::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(85% + 8px);
+    height: calc(85% + 8px);
+    background: linear-gradient(45deg,#ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000,#ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000);
+    background-size: 300%;
+    border-radius: 10px;
+    animation: AnimarBordaColorida 16s linear alternate infinite;
+}
+
+.caixa::after {
+    filter: blur(50px);
+}
+
+@keyframes AnimarBordaColorida {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+}
